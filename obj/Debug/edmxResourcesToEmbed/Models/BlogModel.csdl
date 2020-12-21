@@ -58,9 +58,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Posts_Users">
-    <End Role="Users" Type="Self.User" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
     <End Role="Posts" Type="Self.Post" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Users">
@@ -71,7 +69,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Blog" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="BlogEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Comments" EntityType="Self.Comment" />
     <EntitySet Name="Posts" EntityType="Self.Post" />
     <EntitySet Name="Users" EntityType="Self.User" />

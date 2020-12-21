@@ -52,9 +52,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Posts_Users">
-    <End Role="Users" Type="Self.Users" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
     <End Role="Posts" Type="Self.Posts" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Users">

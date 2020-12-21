@@ -10,7 +10,7 @@ namespace PostBlog.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        protected Blog context = new Blog();
+        protected BlogEntities context = new BlogEntities();
         public void Delete(int id)
         {
             this.context.Set<T>().Remove(Get(id));

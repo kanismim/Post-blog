@@ -9,11 +9,9 @@
 
 namespace PostBlog.Models
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    using System.Xml.Serialization;
-
+    
     public partial class Post
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -27,7 +25,6 @@ namespace PostBlog.Models
         public int UserId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-       
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual User User { get; set; }
     }
