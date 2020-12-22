@@ -28,9 +28,10 @@ namespace PostBlog.Models
         public string Password { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [JsonIgnore, XmlIgnore]
         public virtual ICollection<Comment> Comments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        [JsonIgnore, XmlIgnore]
+        [JsonIgnore,XmlIgnore]
         public virtual ICollection<Post> Posts { get; set; }
     }
 }
