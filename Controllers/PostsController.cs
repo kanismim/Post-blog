@@ -92,5 +92,13 @@ namespace PostBlog.Controllers
             comRepo.Update(comment);
             return Ok(comment);
         }
+
+        [Route("{id}/comments/{i}")]
+        public IHttpActionResult DeleteComment(int i)
+        {
+            
+            comRepo.Delete(i);
+            return StatusCode(HttpStatusCode.NoContent);
+        }
     }
 }
